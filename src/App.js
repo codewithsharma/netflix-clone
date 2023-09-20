@@ -3,10 +3,20 @@ import { Row } from './Row';
 import requests from './requests';
 import { Banner } from './Banner';
 import { Navbar } from './Navbar';
+import { useEffect, useState } from 'react';
+import LoadingScreen from './LoadingScreen';
+import Footer from './Footer';
 
 function App() {
+  const [loading,setLoading] = useState(true)
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000)
+  }, [])
   return (
-    <div className="App">
+   <>
+  { loading === false?
+
+   (<div className="App">
 
       <Navbar/>
       <Banner/>
@@ -20,7 +30,12 @@ function App() {
       <Row title ="Comedy" fetchURL ={requests.fetchComedyMovies}/>
       <Row title ="Action" fetchURL ={requests.fetchActionMovies}/>
       <Row title ="Documentry" fetchURL ={requests.fetchDocumentaries}/>
-    </div>
+      <Footer/>
+    </div> ):
+    <div><LoadingScreen/></div>
+}
+   </>    
+    
   );
 }
 
