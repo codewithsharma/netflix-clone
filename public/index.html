@@ -29,6 +29,29 @@
   <body>
     <script src="https://kit.fontawesome.com/e95f544c8f.js" crossorigin="anonymous"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyA2Fq0IHHO4oYXMzp5tzSK5sG-4AZJPrN8",
+        authDomain: "netflix-clone-6ee86.firebaseapp.com",
+        projectId: "netflix-clone-6ee86",
+        storageBucket: "netflix-clone-6ee86.appspot.com",
+        messagingSenderId: "201244805306",
+        appId: "1:201244805306:web:7a50cb865a40c0708d9a83",
+        measurementId: "G-KRG5KWQ675"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

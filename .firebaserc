@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "netflix-clone-codewithsharma"
-  }
+    "default": "netflixclone-codewithsharma",
+    "create": "netflixclone-codewithsharma"
+  },
+  "targets": {},
+  "etags": {}
 }
